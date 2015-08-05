@@ -10,7 +10,7 @@ default: spec
 .PHONY: install
 install: $(installed)
 
-$(installed): Gemfile.lock Gemfile
+$(installed): Gemfile.lock Gemfile simple_http_client.gemspec
 	@gem list bundler -i > /dev/null || gem install bundler
 	@bundle install
 	@touch $@
